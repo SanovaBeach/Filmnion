@@ -1,6 +1,21 @@
 .HeroImage {
-  height: 60rem;
-  background-size: cover;
-  background-position: center;
-  opacity: .6;
+
+  &_contents {
+
+  }
+
+  &_text {
+    max-width: 55rem;
+    background: linear-gradient(to bottom, rgba($black, .2), rgba($black, .2));
+    padding: 2rem;
+    position: absolute;
+    bottom: 4rem;
+    margin: 2rem;
+  }
+
+  &_title {
+    margin-bottom: 1.5rem;
+  }
+  &_overview {
+  }
 }

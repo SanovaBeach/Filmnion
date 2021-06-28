@@ -1,22 +1,27 @@
-import React from 'react'
+import React from 'react';
 
-const HeroImage = ({ backDrop}) => {
+const HeroImage = ({ backDrop, movie }) => {
   return (
     <React.Fragment>
-      <div className="HeroImage" 
+      <header
+        className="HeroImage"
         style={{
           backgroundImage: `url(${backDrop})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: '100% center',
+          height: '60rem',
+          position: 'relative'
         }}
       >
-        <div className="HeroImage_container">
-
-
+      <div className="HeroImage_contents container">
+        <div className="HeroImage_text">
+        <h1 className="HeroImage_title">{movie.original_title || movie.original_name}</h1>
+        <p className="HeroImage_overview">{movie.overview }</p>
         </div>
       </div>
+      </header>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default HeroImage
+export default HeroImage;

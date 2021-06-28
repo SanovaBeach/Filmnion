@@ -24,9 +24,7 @@ SwiperCore.use([Navigation]);
 const Row = ({ fetchUrl, title, genreId }) => {
   const { movies, loading, error } = useFetchMovies(fetchUrl, genreId);
 
-  // if (loading) {
-  //   return <Loading />;
-  // }
+  
 
   return (
     <React.Fragment>

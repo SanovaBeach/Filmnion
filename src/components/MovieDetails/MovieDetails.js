@@ -17,7 +17,7 @@ const MovieDetails = ({ movie, credits }) => {
     <React.Fragment>
       <MovieInfo 
         movie={movie} 
-        backDrop={movie.poster_path ? `${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.poster_path}` : NoImage}
+        backDrop={movie.poster_path ? `${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.backdrop_path}` : NoImage}
       />
       <Actors 
         credits={credits}

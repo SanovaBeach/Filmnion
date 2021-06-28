@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Loading } from '../components';
+import { Row, Loading, Banner } from '../components';
 import { requests } from '../constants/requests';
 import {useFetchMovies} from '../hooks/useFetchMovies'
 
@@ -12,6 +12,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+      <Banner />
       <Row fetchUrl={requests.fetchTrending} title="Most Popular" />
       <Row fetchUrl={requests.fetchTopRated} title="Top Rated" />
       <Row fetchUrl={requests.fetchGenre} title="Action Movies" genreId={28} />
