@@ -1,0 +1,25 @@
+.MoviesList {
+
+
+  &_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &_loadMore {
+    display: block;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    font-size: $fontSmall;
+    background: black;
+    border-radius: 10rem;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(black, .8);
+      color: gray;
+    }
+  }
+}
