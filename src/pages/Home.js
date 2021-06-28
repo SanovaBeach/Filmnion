@@ -1,8 +1,15 @@
 import React from 'react';
-import { Row } from '../components';
+import { Row, Loading } from '../components';
 import { requests } from '../constants/requests';
+import {useFetchMovies} from '../hooks/useFetchMovies'
 
 const Home = () => {
+  const {loading} = useFetchMovies()
+
+  if(loading) {
+    return <Loading />
+  }
+
   return (
     <React.Fragment>
       <Row fetchUrl={requests.fetchTrending} title="Most Popular" />
