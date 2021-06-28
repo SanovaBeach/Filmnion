@@ -1,0 +1,46 @@
+.Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+
+  &_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &_logo {
+
+  }
+  &_search {
+    font-size: $fontMedium;
+  }
+
+  &_linksContainer {
+    display: flex;
+    list-style: none;
+  }
+
+  &_linkItem {
+    padding: 0 1rem;
+    font-size: $fontMedium;
+
+  }
+  &_link {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    text-decoration: none;
+    color: $white;
+
+  }
+}
+
+.nav_black {
+  background-color: rgba($black, .8);
+  height: 6rem;
+}

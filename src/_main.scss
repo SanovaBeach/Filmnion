@@ -1,0 +1,12 @@
+@import "styles/base";
+@import "styles/variables";
+@import "styles/fonts";
+
+@import "components/Navbar/navbar";
+@import "components/Row/row";
+@import "components/Loading/loading";
+@import "components/Thumbnails/thumbnails";
+@import "components/HeroImage/heroImage";
+@import "components/MovieDetails/movieDetails";
+@import "components/MovieInfo/movieInfo";
+@import "components/Actors/actors";

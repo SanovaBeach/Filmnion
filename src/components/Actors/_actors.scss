@@ -1,0 +1,48 @@
+.Actors {
+  padding: 8rem 0rem;
+
+  &_title {
+    font-size: $fontSuper;
+    text-align: center;
+    padding: 2rem;
+    text-decoration: underline;
+    margin-bottom: 3rem;
+
+    &:first-letter {
+      color: gold;
+      font-size: 5rem;
+    }
+  }
+
+  &_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &_content {
+    width: 100%;
+    height: 100%;
+  }
+
+  &_image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  &_desc {
+    transform: translateY(-6.5rem);
+    text-align: center;
+    text-transform: capitalize;
+    background: rgba($black, .8);
+    padding: .75rem 0;
+    line-height: 1.3;
+  }
+  &_name {
+    font-size: $fontSmall;
+  }
+  &_character {
+  }
+}

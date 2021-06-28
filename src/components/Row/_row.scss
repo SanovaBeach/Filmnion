@@ -1,0 +1,30 @@
+.Row {
+
+  &_columnContainer {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &_rowContainer {
+    display: flex;
+    flex-direction: row;
+    height: 40rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+  }
+}
+
+// swiper styles
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  padding:  2rem;
+  height: 100%;
+  &:hover{
+    background-color: rgba($white, .3);
+  }
+}
+

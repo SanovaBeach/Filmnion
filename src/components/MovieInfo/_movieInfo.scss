@@ -1,0 +1,68 @@
+.MovieInfo {
+  animation: animateMovieinfo 1s;
+
+
+  @keyframes animateMovieinfo {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  &_container {
+    display: flex;
+    background: rgba(0, 0, 0, .7);
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+  }
+
+  &_text {
+    width: 100%;
+    padding: 2rem 4rem;
+    color: $white;
+    overflow: hidden;
+  }
+  &_title {
+    font-size: $fontSuper;
+  }
+  &_plot {
+    font-size: $fontMedium;
+  }
+  &_overview {
+    margin: 0;
+  }
+  &_desc {
+
+  }
+  &_ratingContainer {
+
+  }
+  &_descTitle {
+    margin: 1rem 0;
+    font-size: 1.9rem;
+  }
+  &_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #000;
+    font-weight: 800;
+    border-radius: 2.5rem;
+    margin: 0px 0 0 0;
+    font-size: 1.9rem;
+  }
+  &_directorContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &_directors {
+    margin: 0 0 0 4rem;
+  }
+}

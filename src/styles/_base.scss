@@ -1,0 +1,26 @@
+@import "fonts";
+
+html {
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: inherit;
+  background-color: #111;
+  color: #fff;
+  font-family: $Abel;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
