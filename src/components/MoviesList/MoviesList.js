@@ -1,6 +1,7 @@
 import React from 'react'
 import Thumbnails from '../Thumbnails/Thumbnails'
 import Loading from '../Loading/Loading'
+import SearchBar from '../SearchBar/SearchBar'
 import {useMovies} from '../../hooks/useMovies'
 
 import {IMAGE_BASE_URL, POSTER_SIZE} from '../../constants/config'
@@ -12,6 +13,7 @@ const MoviesList = () => {
   return (
     <React.Fragment>
       <div className="MoviesList">
+        <SearchBar setSearch={setSearch} />
         <div className="MoviesList_container container">
           {state.results.map((movie) => {
             return(

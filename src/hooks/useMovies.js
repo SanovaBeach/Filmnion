@@ -23,7 +23,7 @@ export const useMovies = () => {
       setLoading(true);
       setError(false);
       const response = search
-        ? await axios.get(`${baseUrl}/search/movie?api_key=${apiKey}&page=${page}`)
+        ? await axios.get(`${baseUrl}/search/movie?api_key=${apiKey}&language=en-US&query=${search}&page=${page}`)
         : await axios.get(
             `${baseUrl}/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`
           );
@@ -44,8 +44,8 @@ export const useMovies = () => {
 
   // initial render
   useEffect(() => {
-    fetchMovie(1);
-  }, []);
+    fetchMovie(1, search);
+  }, [search]);
 
   // if iLoadingMore === true
   useEffect(() => {

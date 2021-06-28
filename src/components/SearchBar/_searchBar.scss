@@ -1,0 +1,26 @@
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+
+  &_container {
+    
+  }  
+
+  &_icon {
+    color: $white;
+    font-size: $fontMedium;
+    vertical-align: middle;
+    margin-right: 1rem;
+  }
+
+  &_input {
+    font-size: $fontMedium;
+    outline: none;
+    padding: 1rem 0 1rem 2rem;
+    vertical-align: middle;
+
+  }
+}
