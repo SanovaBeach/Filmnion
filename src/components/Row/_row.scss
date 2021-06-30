@@ -6,6 +6,11 @@
       font-size: $fontMedium;
       margin-top: 1rem;
     }
+
+    @media screen and (max-width: $small) {
+      font-size: 1.6rem;
+      margin-top: 1rem;
+    }
     
     &:first-letter {
       color: gold;
@@ -13,8 +18,11 @@
 
       @media screen and (max-width: $medium) {
         font-size: $fontMedium;
-
       } 
+
+      @media screen and (max-width: $small) {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -35,6 +43,10 @@
     @media screen and (max-width: $medium) {
       height: 25rem;
     }
+
+    @media screen and (max-width: $small) {
+      height: 15rem;
+    }
   }
 }
 
@@ -47,6 +59,10 @@
   height: 100%;
   &:hover{
     background-color: rgba($white, .3);
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: 2rem;
   }
 }
 

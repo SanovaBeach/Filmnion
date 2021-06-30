@@ -7,7 +7,7 @@ const MovieDetail = () => {
   const {media_type, titleId} = useParams()
   const {movie, credits, loading, error} = useMovieDetail(media_type, titleId)
 
-  if(loading) return <Loading />
+  if(loading) return <Loading page={true} />
 
   return (
     <React.Fragment>

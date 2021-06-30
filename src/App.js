@@ -4,7 +4,6 @@ import './_main.scss'
 import {Navbar, Footer} from './components'
 import Home from './pages/Home'
 import Movies from './pages/Movies'
-import ViewMore from './pages/ViewMore'
 import MovieDetail from './pages/MovieDetail'
 
 const App = () => {
@@ -15,7 +14,6 @@ const App = () => {
           <Route exact path='/' component={Home} />
           <Route exact path='/:media_type/' component={Movies} />
           <Route exact path='/:media_type/:titleId' component={MovieDetail} />
-          <Route exact path='/genre/:genreId' component={ViewMore} />
         </Switch>
       <Footer />
     </React.Fragment>

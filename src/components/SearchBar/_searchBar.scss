@@ -4,9 +4,12 @@
   align-items: center;
   padding: 2rem 0;
 
+  @media screen and (max-width: $small) {
+    padding: 1rem 0;   
+  }
+
 
   &_container {
-    
   }  
 
   &_icon {

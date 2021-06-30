@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
           <div className="Footer_text">
             <h3 className="Footer_heading">
-              This website is powered by TMDB LOGO
+              This website is powered by <a href="https://themoviedb.org" className="Footer_link">TMDB</a>
             </h3>
             <p className="Footer_copyright">
               &copy; 2021, Filmnion Inc.,

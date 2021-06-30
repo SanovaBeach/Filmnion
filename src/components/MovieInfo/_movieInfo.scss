@@ -18,6 +18,10 @@
     padding-top: 3rem;
     padding-bottom: 4rem;
 
+    @media screen and (max-width: $small) {
+      flex-direction: column;  
+    }
+
   }
 
   &_text {
@@ -25,6 +29,12 @@
     padding: 2rem 4rem;
     color: $white;
     overflow: hidden;
+
+    @media screen and (max-width: $small) {
+      padding: 1rem 0rem;
+      text-align: center;
+
+    }
   }
   &_title {
     font-size: $fontSuper;

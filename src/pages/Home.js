@@ -7,7 +7,7 @@ const Home = () => {
   const { loading } = useFetchMovies();
 
   if (loading) {
-    return <Loading />;
+    return <Loading page={true} />;
   }
 
   return (

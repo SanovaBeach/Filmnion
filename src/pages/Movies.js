@@ -8,7 +8,7 @@ const Movies = () => {
   const { loading} = useMovies()
 
   if(loading) {
-    return <Loading />
+    return <Loading page={true} />
   }
 
   return (

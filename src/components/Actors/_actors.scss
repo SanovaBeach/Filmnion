@@ -2,7 +2,7 @@
   padding: 8rem 0rem;
 
   @media screen and (max-width: $medium) {
-    padding: 2rem 0rem;    
+    padding: 2rem 0rem;
   }
 
   &_title {
@@ -26,7 +26,6 @@
         font-size: $fontMedium;
       }
     }
-
   }
 
   &_container {
@@ -35,7 +34,11 @@
     grid-gap: 2rem;
 
     @media screen and (max-width: $medium) {
-      grid-template-columns: repeat(4, 1fr); 
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (max-width: $small) {
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     }
   }
 
@@ -45,7 +48,7 @@
 
     @media screen and (max-width: $medium) {
       width: 100%;
-      height: 100%; 
+      height: 100%;
     }
   }
 
@@ -55,20 +58,31 @@
     object-fit: cover;
     border-radius: 1rem;
 
-
+    
   }
 
   &_desc {
     transform: translateY(-6.5rem);
     text-align: center;
     text-transform: capitalize;
-    background: rgba($black, .8);
-    padding: .75rem 0;
+    background: rgba($black, 0.8);
+    padding: 0.75rem 0;
     line-height: 1.3;
+
+    @media screen and (max-width: $small) {
+      transform: translateY(-7.5rem);
+    }
   }
   &_name {
     font-size: $fontSmall;
+
+    @media screen and (max-width: $small) {
+      font-size: 1.6rem;
+    }
   }
   &_character {
+    @media screen and (max-width: $small) {
+      font-size: 1.4rem;
+    }
   }
 }

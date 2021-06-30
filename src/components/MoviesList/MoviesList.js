@@ -12,6 +12,10 @@ const MoviesList = () => {
   const {media_type} = useParams()
   const {state, loading,  setSearch, setIsLoadingMore} = useMovies(media_type)
 
+  if(loading) {
+    return <Loading page={true} />
+  }
+
   return (
     <React.Fragment>
       <div className="MoviesList">
