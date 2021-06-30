@@ -6,9 +6,12 @@ import Home from './pages/Home'
 import Movies from './pages/Movies'
 import MovieDetail from './pages/MovieDetail'
 
+import ScrollToTop from './components/ScrollToTop'
+
 const App = () => {
   return (
     <React.Fragment>
+      <ScrollToTop />
       <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />

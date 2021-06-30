@@ -56,13 +56,8 @@
 .swiper-button-prev,
 .swiper-button-next {
   padding:  2rem;
-  height: 100%;
   &:hover{
     background-color: rgba($white, .3);
-  }
-
-  @media screen and (max-width: $small) {
-    font-size: 2rem;
   }
 }
 
