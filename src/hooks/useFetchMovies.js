@@ -13,6 +13,7 @@ export const useFetchMovies = (fetchUrl, genreId) => {
       const response = genreId 
         ? await axios.get(`${fetchUrl}${genreId}`) 
         : await axios.get(fetchUrl)
+      console.log(response)
       setMovies(response.data.results)
     } catch (e) {
       setError(true);

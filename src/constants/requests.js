@@ -8,6 +8,9 @@ export const requests = {
   fetchTopRated: `${baseUrl}/movie/top_rated?api_key=${apiKey}&language=en-US`,
   fetchGenre: `${baseUrl}/discover/movie?api_key=${apiKey}&with_genres=`,
   fetchMovieDetail: `${baseUrl}/movie/`,
-  fetchTvDetail: `${baseUrl}/tv/`
+  fetchTvDetail: `${baseUrl}/tv/`,
+  fetchTvLatest: `${baseUrl}/tv/latest?api_key=${apiKey}&language=en-US`,
+  fetchTvPopular: `${baseUrl}/tv/popular?api_key=${apiKey}&language=en-US`,
+  fetchTvTopRated: `${baseUrl}/tv/top_rated?api_key=${apiKey}&language=en-US`,
 };
 
