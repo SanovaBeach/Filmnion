@@ -5,7 +5,7 @@ import {Loading, MoviesList} from '../components'
 
 
 const Movies = () => {
-  const {state, loading, error, search} = useMovies()
+  const { loading} = useMovies()
 
   if(loading) {
     return <Loading />

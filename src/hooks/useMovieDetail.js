@@ -1,6 +1,5 @@
-import {useState, useEffect, useCallback} from 'react'
+import {useState, useEffect} from 'react'
 import axios from 'axios'
-import {requests} from '../constants/requests'
 
 const baseUrl = 'https://api.themoviedb.org/3'
 
@@ -18,11 +17,13 @@ export const useMovieDetail = (media_type, titleId) => {
       setLoading(true)
       setError(false)
       const response = await 
-        axios.get(`${baseUrl}/${media_type}/${titleId}?api_key=${apiKey}`)
+        axios.get(`${baseUrl}/${media_type}/${titleId}?api_key=${apiKey}${media_type === 'tv' ? '&append_to_response=tv-season,tv-episodes' :''}`)
       const creditsResponse = await 
         axios.get(`${baseUrl}/${media_type}/${titleId}/credits?api_key=${apiKey}`)
       setMovie(response.data)
       setCredits(creditsResponse.data.cast)
+      console.log(response)
+
     } catch(e) {
       setError(true)      
     }

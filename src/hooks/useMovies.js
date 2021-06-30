@@ -11,23 +11,22 @@ const initialState = {
   totalResult: 0,
 };
 
-export const useMovies = () => {
+export const useMovies = (media_type) => {
   const [state, setState] = useState(initialState);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [search, setSearch] = useState('');
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
-  const fetchMovie = async (page, search = '') => {
+  const fetchMovie = async (page, search = '', media_type) => {
     try {
       setLoading(true);
       setError(false);
       const response = search
         ? await axios.get(`${baseUrl}/search/movie?api_key=${apiKey}&language=en-US&query=${search}&page=${page}`)
         : await axios.get(
-            `${baseUrl}/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`
+            `${baseUrl}/${media_type}/popular?api_key=${apiKey}&language=en-US&page=${page}`
           );
-      console.log('response data', response.data);
       const data = response.data
       setState((prev) => ({
         ...data,
@@ -36,6 +35,8 @@ export const useMovies = () => {
             ? [...prev.results, ...data.results]
             : [...data.results],
       }));
+      
+      
     } catch (e) {
       setError(true);
     }
@@ -44,16 +45,21 @@ export const useMovies = () => {
 
   // initial render
   useEffect(() => {
-    fetchMovie(1, search);
-  }, [search]);
+    fetchMovie(1, search, media_type);
+  }, [search, media_type]);
 
-  // if iLoadingMore === true
+  // if isLoadingMore === true
   useEffect(() => {
     if (!isLoadingMore) return;
-    console.log('fetching loading more')
-    fetchMovie(state.page + 1, search);
+    fetchMovie(state.page + 1, search, media_type);
     setIsLoadingMore(false);
   }, [state.page, isLoadingMore, search]);
+
+  useEffect(() => {
+    return () => {
+      
+    };
+  }, [])
 
   return { state, loading, error, search, setSearch, setIsLoadingMore };
 };

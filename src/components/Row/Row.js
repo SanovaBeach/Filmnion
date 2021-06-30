@@ -6,14 +6,12 @@ import 'swiper/swiper-bundle.css';
 
 // Components
 import Thumbnails from '../Thumbnails/Thumbnails';
-import Loading from '../Loading/Loading';
 
 // Custom hooks and constants
 import { useFetchMovies } from '../../hooks/useFetchMovies';
 import {
   IMAGE_BASE_URL,
   POSTER_SIZE,
-  BACKDROP_SIZE,
 } from '../../constants/config';
 import NoImage from '../../images/no_image.jpg'
 

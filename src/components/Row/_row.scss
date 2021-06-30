@@ -1,5 +1,12 @@
 .Row {
 
+  &_title {
+    &:first-letter {
+      color: gold;
+      font-size: 5rem;
+    }
+  }
+
   &_columnContainer {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE} from '../../constants/config'
+import {IMAGE_BASE_URL, BACKDROP_SIZE } from '../../constants/config'
 import {requests} from '../../constants/requests'
 import axios from 'axios'
 import {useFetchMovies} from '../../hooks/useFetchMovies'
@@ -26,7 +26,6 @@ const Banner = () => {
     fetchMovie()
   }, [])
 
-  console.log('banner', movie)
 
   return (
     <React.Fragment>

@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from 'react'
 import { FaSearch } from 'react-icons/fa';
 
 
-const SearchBar = ({setSearch}) => {
+const SearchBar = ({setSearch, media_type}) => {
   const [input, setInput] = useState('')
   const initial = useRef(true)
 
@@ -26,7 +26,7 @@ const SearchBar = ({setSearch}) => {
         <input 
           type="text" 
           className="SearchBar_input"
-          placeholder='Search'
+          placeholder={`Search ${media_type}`}
           onChange={ (event) => setInput(event.currentTarget.value)}
           value={input}
         />

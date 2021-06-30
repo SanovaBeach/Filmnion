@@ -4,7 +4,6 @@ import {IMAGE_BASE_URL, POSTER_SIZE} from '../../constants/config'
 import NoImage from '../../images/no_image.jpg'
 
 const Actors = ({credits}) => {
-  console.log(credits)
 
   return (
     <React.Fragment>

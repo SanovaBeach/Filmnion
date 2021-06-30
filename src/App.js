@@ -13,7 +13,7 @@ const App = () => {
       <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/movies/' component={Movies} />
+          <Route exact path='/:media_type/' component={Movies} />
           <Route exact path='/:media_type/:titleId' component={MovieDetail} />
           <Route exact path='/genre/:genreId' component={ViewMore} />
         </Switch>

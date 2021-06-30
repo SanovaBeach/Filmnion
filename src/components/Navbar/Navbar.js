@@ -14,7 +14,7 @@ const Navbar = () => {
       }
     });
     return () => {
-      window.RemoveEventListener('scroll');
+      window.removeEventListener('scroll');
     };
   }, []);
 
@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className={`Navbar_menu container ${show && 'nav_black'}`}>
           <h1 className="Navbar_logo">
             <Link to="/" className="Navbar_link">
-              Movie Search
+              Filmion
             </Link>
           </h1>
           <div className="Navbar_search">
@@ -37,7 +37,10 @@ const Navbar = () => {
               <Link to='/' className="Navbar_link">Home</Link>
             </li>
             <li className="Navbar_linkItem">
-              <Link to='/movies' className="Navbar_link">Movies</Link>
+              <Link to='/movie' className="Navbar_link">Movie</Link>
+            </li>
+             <li className="Navbar_linkItem">
+              <Link to='/tv' className="Navbar_link">TV</Link>
             </li>
             <li className="Navbar_linkItem">
               <Link to='/about' className="Navbar_link">About</Link>
