@@ -1,0 +1,26 @@
+.Footer {
+  padding: 5rem 0rem;
+  margin-top: 8rem;
+  background: rgba(gray, .4);
+
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_logoContainer {
+    display: flex;
+    flex-basis: 50%;
+
+  }
+
+  &_logo {
+    max-width: 50rem;
+    width: 100%;
+  }
+
+  &_text {
+    margin-left: 2rem;
+  }
+}

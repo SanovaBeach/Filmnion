@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch} from 'react-router-dom'
 import './_main.scss'
-import {Navbar} from './components'
+import {Navbar, Footer} from './components'
 import Home from './pages/Home'
 import Movies from './pages/Movies'
 import ViewMore from './pages/ViewMore'
@@ -17,6 +17,7 @@ const App = () => {
           <Route exact path='/:media_type/:titleId' component={MovieDetail} />
           <Route exact path='/genre/:genreId' component={ViewMore} />
         </Switch>
+      <Footer />
     </React.Fragment>
   )
 }
