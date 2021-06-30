@@ -1,0 +1,29 @@
+.Season {
+  margin-bottom: 8rem;
+
+  &_container {
+
+  }
+
+  &_selectContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: $fontMedium;
+    margin-bottom: 4rem;
+  }
+  &_label {
+    margin-right: 1rem;
+
+  }
+  &_select {
+
+  }
+
+  &_episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    grid-gap: 2rem;
+  }
+}

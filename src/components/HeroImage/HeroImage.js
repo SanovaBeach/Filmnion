@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 const HeroImage = ({ backDrop, movie }) => {
-  console.log('hero image', movie)
   return (
     <React.Fragment>
       <header
@@ -20,7 +19,12 @@ const HeroImage = ({ backDrop, movie }) => {
           <h1 className="HeroImage_title">{movie.original_title || movie.original_name}
           </h1>
           <p className="HeroImage_overview">{movie.overview }</p>
-
+          <Link 
+            to={`/${movie.media_type}/${movie.id}`} 
+            className='HeroImage_link'
+          >
+            More Info
+          </Link>
         </div>
       </div>
       </header>

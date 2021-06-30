@@ -22,7 +22,6 @@ export const useMovieDetail = (media_type, titleId) => {
         axios.get(`${baseUrl}/${media_type}/${titleId}/credits?api_key=${apiKey}`)
       setMovie(response.data)
       setCredits(creditsResponse.data.cast)
-      console.log(response)
 
     } catch(e) {
       setError(true)      

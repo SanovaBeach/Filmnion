@@ -40,16 +40,16 @@ const Season = ({ seasons, titleId }) => {
         <h1 className="Actors_title">TV Seasons</h1>
         <div className="Season_container container">
           <div className="Season_selectContainer">
-          <label htmlFor="season" className="Season_label">
-            Season
-          </label>
-          <select name="season" id="season" className="Season_select">
-            {seasons.map((season, index) => (
-              <option key={season.id} onClick={updateSeason}>
-                {index + 1}
-              </option>
-            ))}
-          </select>
+            <label htmlFor="season" className="Season_label">
+              Season
+            </label>
+            <select name="season" id="season" className="Season_select">
+              {seasons.map((season, index) => (
+                <option key={season.id} onClick={updateSeason}>
+                  {index + 1}
+                </option>
+              ))}
+            </select>
           </div>
           {loading && <Loading />}
           {!loading && (

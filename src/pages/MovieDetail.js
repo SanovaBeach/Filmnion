@@ -8,7 +8,6 @@ const MovieDetail = () => {
   const {movie, credits, loading, error} = useMovieDetail(media_type, titleId)
 
   if(loading) return <Loading />
-    console.log('credits', credits)
 
   return (
     <React.Fragment>
