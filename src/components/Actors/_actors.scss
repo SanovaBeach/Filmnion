@@ -1,6 +1,10 @@
 .Actors {
   padding: 8rem 0rem;
 
+  @media screen and (max-width: $medium) {
+    padding: 2rem 0rem;    
+  }
+
   &_title {
     font-size: $fontSuper;
     text-align: center;
@@ -8,21 +12,41 @@
     text-decoration: underline;
     margin-bottom: 3rem;
 
+    @media screen and (max-width: $medium) {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      font-size: $fontMedium;
+    }
+
     &:first-letter {
       color: gold;
       font-size: 5rem;
+
+      @media screen and (max-width: $medium) {
+        font-size: $fontMedium;
+      }
     }
+
   }
 
   &_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-gap: 2rem;
+
+    @media screen and (max-width: $medium) {
+      grid-template-columns: repeat(4, 1fr); 
+    }
   }
 
   &_content {
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: $medium) {
+      width: 100%;
+      height: 100%; 
+    }
   }
 
   &_image {
@@ -30,6 +54,8 @@
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
+
+
   }
 
   &_desc {

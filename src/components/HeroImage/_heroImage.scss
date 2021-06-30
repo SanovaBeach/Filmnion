@@ -1,27 +1,49 @@
 .HeroImage {
   margin-bottom: 5rem;
 
+  @media screen and (max-width: $medium) {
+    margin-bottom: 1rem;
+  }
+
   &_contents {
 
   }
 
   &_text {
     max-width: 55rem;
-    background: linear-gradient(to bottom, rgba($black, .2), rgba($black, .2));
-    padding: 2rem;
+    background: linear-gradient(to bottom, rgba($black, .5), rgba($black, .3));
     position: absolute;
+    padding: 2rem;
     bottom: 4rem;
     margin: 2rem;
+
+    @media screen and (max-width: $medium) {
+      bottom: 2rem;
+      margin: 1rem;
+      padding: 5px;
+      max-width: 30rem;
+    }
   }
 
   &_title {
     margin-bottom: 1.5rem;
+
+    @media screen and (max-width: $medium) {
+      margin-bottom: 5px;
+      font-size: $fontMedium;
+    }
   }
   &_overview {
   }
   &_link {
-    font-size: $fontMedium;
+    font-size: $fontSmall;
     margin-top: 1.5rem;
-    color: gray;
+    color: $black;
+    font-weight: 800;
+
+    @media screen and (max-width: $medium) {
+      margin-top: 5px;
+      font-size: $fontSmall;
+    }
   }
 }

@@ -10,8 +10,9 @@ const HeroImage = ({ backDrop, movie }) => {
           backgroundImage: `url(${backDrop})`,
           backgroundSize: 'cover',
           backgroundPosition: '100% center',
-          height: '60rem',
-          position: 'relative'
+          height: '50rem',
+          position: 'relative',
+          maxHeight: '50rem'
         }}
       >
       <div className="HeroImage_contents container">

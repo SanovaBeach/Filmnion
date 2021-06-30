@@ -1,17 +1,32 @@
 .Episodes {
   display: flex;
   max-height: 30rem;
+  background: rgba(gray, .3);
+  padding: 1rem 1rem;
+
+  @media screen and (max-width: $medium) {
+    width: 100%;    
+  }
   
 
   &_image {
     width: 100%;
     max-width: 23rem;
     margin-right: 1rem;
-    object-fit: cover;
+    object-fit: contain;
+
+    @media screen and (max-width: $medium) {
+      width: 25rem;
+    }
   }
 
   &_desc {
     max-width: 20rem;
+
+    @media screen and (max-width: $medium) {
+      max-width: 100%; 
+      font-size: 1.5rem;
+    }
   }
   &_icon {
     color: gold;

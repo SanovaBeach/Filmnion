@@ -5,6 +5,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-gap: 2rem;
+
+    @media screen and (max-width: $medium) {
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      grid-gap: 5px;
+    }
   }
 
   &_loadMore {
@@ -16,6 +21,12 @@
     border-radius: 10rem;
     color: $white;
     cursor: pointer;
+
+    @media screen and (max-width: $medium) {
+      margin: 1rem auto;
+      font-size: 1.6rem;
+      padding: .5rem 1rem;
+    }    
 
     &:hover {
       background-color: rgba(black, .8);

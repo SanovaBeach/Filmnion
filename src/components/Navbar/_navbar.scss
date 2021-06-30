@@ -13,6 +13,21 @@
     width: 100%;
   }
 
+  &_mobileIcon {
+    color: $white;
+    display: none;
+
+    @media screen and (max-width: $medium) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 3rem;
+      cursor: pointer;
+    }
+  }
+
   &_logo {
 
   }
@@ -23,6 +38,10 @@
   &_linksContainer {
     display: flex;
     list-style: none;
+
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
   }
 
   &_linkItem {
@@ -33,6 +52,7 @@
   &_link {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 7rem;
     text-decoration: none;
     color: $white;
@@ -42,5 +62,21 @@
 
 .nav_black {
   background-color: rgba($black, .3);
-  height: 6rem;
+  height: 7rem;
+
+  @media screen and (max-width: $medium) {
+    background-color: black;
+  }
+
+}
+
+.show-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  top: 7rem;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
 }

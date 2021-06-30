@@ -12,6 +12,13 @@
     padding: 2rem;
     font-size: $fontMedium;
     margin-bottom: 4rem;
+
+    @media screen and (max-width: $medium) {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      font-size: $fontSmall;
+    }
+
   }
   &_label {
     margin-right: 1rem;
@@ -25,5 +32,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
     grid-gap: 2rem;
+
+    
   }
 }

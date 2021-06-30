@@ -1,10 +1,20 @@
 .Row {
 
   &_title {
+
+    @media screen and (max-width: $medium) {
+      font-size: $fontMedium;
+      margin-top: 1rem;
+    }
     
     &:first-letter {
       color: gold;
       font-size: 4rem;
+
+      @media screen and (max-width: $medium) {
+        font-size: $fontMedium;
+
+      } 
     }
   }
 
@@ -17,9 +27,14 @@
     display: flex;
     flex-direction: row;
     height: 40rem;
+    max-height: 40rem;
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
+
+    @media screen and (max-width: $medium) {
+      height: 25rem;
+    }
   }
 }
 
