@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className={`Navbar_menu container ${show && 'nav_black'}`}>
           <h1 className="Navbar_logo" onClick={closeMobile}>
             <Link to="/" className="Navbar_link">
-              Filmion
+              Filmnion
             </Link>
           </h1>
           <div className="Navbar_mobileIcon" onClick={handleClick}>
