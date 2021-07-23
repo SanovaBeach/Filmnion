@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import {FaBars, FaTimes} from 'react-icons/fa'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
-  const [click, setClick] = useState(false)
-  const [button, setButton] = useState(true)
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   function closeMobile() {
-    setClick(false)
+    setClick(false);
   }
   function handleClick() {
-    setClick(!click)
+    setClick(!click);
   }
 
   function showButton() {
-    if(window.innerWidth <= 768) {
-      setButton(false)
+    if (window.innerWidth <= 768) {
+      setButton(false);
     } else {
-      setButton(true)
+      setButton(true);
     }
   }
 
-  useEffect(()=> {
-    showButton()
-  }, [])
+  useEffect(() => {
+    showButton();
+  }, []);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
         setShow(true);
       } else {
@@ -35,14 +35,14 @@ const Navbar = () => {
       }
     });
     return () => {
-      window.removeEventListener('scroll');
+      window.removeEventListener("scroll");
     };
   }, []);
 
   return (
     <React.Fragment>
       <div className="Navbar">
-        <div className={`Navbar_menu container ${show && 'nav_black'}`}>
+        <div className={`Navbar_menu  ${show && "nav_black"}`}>
           <h1 className="Navbar_logo" onClick={closeMobile}>
             <Link to="/" className="Navbar_link">
               Filmnion
@@ -52,17 +52,24 @@ const Navbar = () => {
             {click ? <FaTimes /> : <FaBars />}
           </div>
 
-          <ul className={`Navbar_linksContainer ${click && 'show-nav'} `}
+          <ul
+            className={`Navbar_linksContainer ${click && "show-nav"} `}
             onClick={closeMobile}
           >
             <li className="Navbar_linkItem">
-              <Link to='/' className="Navbar_link">Home</Link>
+              <Link to="/" className="Navbar_link">
+                Home
+              </Link>
             </li>
             <li className="Navbar_linkItem">
-              <Link to='/movie' className="Navbar_link">Movie</Link>
+              <Link to="/movie" className="Navbar_link">
+                Movie
+              </Link>
             </li>
-             <li className="Navbar_linkItem">
-              <Link to='/tv' className="Navbar_link">TV</Link>
+            <li className="Navbar_linkItem">
+              <Link to="/tv" className="Navbar_link">
+                TV
+              </Link>
             </li>
           </ul>
         </div>

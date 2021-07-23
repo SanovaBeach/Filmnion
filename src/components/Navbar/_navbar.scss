@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 0 5rem;
   }
 
   &_mobileIcon {
@@ -28,12 +29,11 @@
     }
 
     @media screen and (max-width: $small) {
-      font-size: 1.6rem;  
+      font-size: 1.6rem;
     }
   }
 
   &_logo {
-
   }
   &_search {
     font-size: $fontMedium;
@@ -51,7 +51,6 @@
   &_linkItem {
     padding: 0 1rem;
     font-size: $fontMedium;
-
   }
   &_link {
     display: flex;
@@ -64,7 +63,7 @@
 }
 
 .nav_black {
-  background-color: rgba($black, .3);
+  background-color: rgba($black, 0.3);
   height: 7rem;
 
   @media screen and (max-width: $medium) {
@@ -72,9 +71,8 @@
   }
 
   @media screen and (max-width: $small) {
-    height: 4rem;   
+    height: 4rem;
   }
-
 }
 
 .show-nav {
@@ -88,6 +86,6 @@
   background-color: black;
 
   @media screen and (max-width: $small) {
-    top: 4rem;   
+    top: 4rem;
   }
 }
