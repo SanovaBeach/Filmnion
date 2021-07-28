@@ -1,7 +1,5 @@
 .Row {
-
   &_title {
-
     @media screen and (max-width: $medium) {
       font-size: $fontMedium;
       margin-top: 1rem;
@@ -11,14 +9,14 @@
       font-size: 1.6rem;
       margin-top: 1rem;
     }
-    
+
     &:first-letter {
       color: gold;
       font-size: 4rem;
 
       @media screen and (max-width: $medium) {
         font-size: $fontMedium;
-      } 
+      }
 
       @media screen and (max-width: $small) {
         font-size: 1.6rem;
@@ -52,12 +50,10 @@
 
 // swiper styles
 
-
 .swiper-button-prev,
 .swiper-button-next {
-  padding:  2rem;
-  &:hover{
-    background-color: rgba($white, .3);
+  padding: 2rem;
+  &:hover {
+    background-color: rgba($white, 0.3);
   }
 }
-
