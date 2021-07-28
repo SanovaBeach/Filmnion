@@ -6,4 +6,5 @@ Filmion is a personal project that because I'm inspired to make a netflix like w
 
 
 # Filmnion HomePage
+![Filmnion Homepage](https://github.com/SanovaBeach/Filmnion/blob/main/src/images/filmnion.png)
 
